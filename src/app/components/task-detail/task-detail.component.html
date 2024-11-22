@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <span>Task Details</span>
+</mat-toolbar>
+
+<div class="task-details-container">
+  <mat-card class="task-details-card">
+    <mat-card-header>
+
+      
+    
+      <mat-card-title>
+        <span class="label">Task:</span> {{ task?.name }}
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+  
+      <p>
+        <span class="label">Description:</span> {{ task?.description }}
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="accent" routerLink="/">Back to Tasks</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

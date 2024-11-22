@@ -1,0 +1,18 @@
+.task-form-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+  

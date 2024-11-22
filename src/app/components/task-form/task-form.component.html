@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <span>{{ isEditMode ? 'Edit Task' : 'Add Task' }}</span>
+</mat-toolbar>
+
+<div class="task-form-container">
+  <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+ 
+    <mat-form-field appearance="fill">
+      <mat-label>Task Name</mat-label>
+      <input matInput [(ngModel)]="task.name" name="name" required />
+    </mat-form-field>
+
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="task.description" name="description" required></textarea>
+    </mat-form-field>
+
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="taskForm.invalid">
+      {{ isEditMode ? 'Update Task' : 'Create Task' }}
+    </button>
+    <button mat-raised-button color="warn" type="button" routerLink="/">
+      Cancel
+    </button>
+  </form>
+</div>
